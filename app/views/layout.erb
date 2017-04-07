@@ -11,6 +11,9 @@
     <% if flash[:notice]%>
       <div Style='color: red' id='notice'><%=flash[:notice] %></div>
     <%end%>
+    <% if flash[:error] %>
+      <%=flash[:error]%>
+    <% end %>
 
     <%=yield%>
   </body>
