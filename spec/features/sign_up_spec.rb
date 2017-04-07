@@ -7,7 +7,7 @@ feature "User Sign Up" do
   end
 
   scenario "user signs up with a mismatching password" do
-    expect { sign_up_fail }.to change(User, :count).by(0)
+    expect { sign_up_fail(password_confirmation: 'wrong') }.not_to change(User, :count)
   end
 
 end
